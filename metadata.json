@@ -1,0 +1,8 @@
+{
+  "name": "SSTV Vision Pro",
+  "description": "A high-fidelity Slow-Scan Television (SSTV) decoder and encoder. Supports Robot 36, Martin, and Scottie modes. Features real-time audio visualization and AI-powered signal insights.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}

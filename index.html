@@ -4,23 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Makes sure assets work on Vercel -->
-    <base href="/" />
-
     <title>SSTV Vision Pro</title>
-
-    <!-- Tailwind included via Vite -->
-    <!-- You should NOT use CDN tailwind here -->
   </head>
   <body class="bg-slate-950 text-slate-100 min-h-screen">
     <noscript>
       Please enable JavaScript to use this application.
     </noscript>
 
-    <!-- React root -->
     <div id="root"></div>
 
-    <!-- Vite injects this automatically -->
-    <script type="module" src="/src/index.tsx"></script>
+    <!-- MUST match the actual file name -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

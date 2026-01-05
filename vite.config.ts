@@ -1,23 +1,22 @@
-import path from "path";
-import { defineConfig, loadEnv } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), "VITE_");
+export default defineConfig({
+  plugins: [react()],
 
-  return {
-    plugins: [react()],
+  // IMPORTANT: fixes black screen on Vercel
+  base: '/',
 
-    server: {
-      port: 3000,
-      host: true
-    },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+  },
 
-    resolve: {
-      alias: {
-        "@": path.resolve(__dirname, "src")
-      }
-    }
-  };
-});
+  server: {
+    port: 5173,
+  },
 
+  preview: {
+    port: 4173,
+  },
+})

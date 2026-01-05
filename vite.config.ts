@@ -13,10 +13,6 @@ export default defineConfig(({ mode }) => {
       host: true
     },
 
-    define: {
-      __GEMINI_API_KEY__: JSON.stringify(env.VITE_GEMINI_API_KEY)
-    },
-
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src")
@@ -24,3 +20,4 @@ export default defineConfig(({ mode }) => {
     }
   };
 });
+
